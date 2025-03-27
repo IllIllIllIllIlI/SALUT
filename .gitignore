@@ -1,41 +1,52 @@
-# dependencies
+# -------------------------------------
+# 📦 Dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# 🧪 Testing
 /coverage
 
-# next.js
+# ⚙️ Next.js
 /.next/
 /out/
 
-# production
+# 🚀 Production builds
 /build
 
-# misc
+# 🧹 Misc
 .DS_Store
+Thumbs.db
 *.pem
 
-# debug
+# 🧼 Windows metadata
+*.Zone.Identifier
+
+# 🐞 Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# 🔐 Environment Variables
 .env
 .env*.local
 .env.development
 .env.test
 .env.production
 
-# vercel
-.vercel
-
-# typescript
+# 🧬 TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-# IDE
+# 🧠 Bolt AI
+.bolt/
+
+# 🧠 Supabase optional (if you have temp files)
+/supabase/.temp/
+
+# ⚙️ Vercel
+.vercel
+
+# 🧠 IDEs & Editor configs
 .idea
 .vscode
