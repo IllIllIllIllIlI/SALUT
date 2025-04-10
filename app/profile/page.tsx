@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -17,15 +17,17 @@ import {
   Mail, 
   Link2, 
   Edit, 
-  Settings,
   MessageSquare,
   Heart,
   Bookmark,
   Shield
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const USER_PROFILE = {
+  id: "1", // Add ID to help identify if it's the current user
   name: "John Doe",
   username: "johndoe",
   email: "john.doe@example.com",
@@ -56,12 +58,26 @@ const USER_PROFILE = {
 const USER_POSTS: any[] = [];
 
 export default function ProfilePage() {
+  const { t } = useTranslation();
   const [isFollowing, setIsFollowing] = useState(false);
   const [activeTab, setActiveTab] = useState("posts");
+  const [mounted, setMounted] = useState(false);
   
+  // In a real app, this would come from your auth context/state
+  const currentUserId = "1"; // Hardcoded for demo
+  const isOwnProfile = USER_PROFILE.id === currentUserId;
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const handleToggleFollow = () => {
     setIsFollowing(!isFollowing);
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20">
@@ -72,7 +88,7 @@ export default function ProfilePage() {
             <nav className="flex items-center space-x-2">
               <ModeToggle />
               <Button asChild variant="default" className="gradient-bg hover:opacity-90">
-                <a href="/sign-in">Sign In</a>
+                <a href="/sign-in">{t('common.signIn')}</a>
               </Button>
             </nav>
           </div>
@@ -125,46 +141,58 @@ export default function ProfilePage() {
                     </div>
                     <div className="flex items-center">
                       <Calendar className="h-4 w-4 mr-1" />
-                      Joined {USER_PROFILE.joinedDate}
+                      {t('profile.joinedDate')} {USER_PROFILE.joinedDate}
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-6 justify-center md:justify-start">
                     <div className="text-center">
                       <p className="font-bold">{USER_PROFILE.stats.posts}</p>
-                      <p className="text-sm text-muted-foreground">Posts</p>
+                      <p className="text-sm text-muted-foreground">{t('profile.posts')}</p>
                     </div>
                     <div className="text-center">
                       <p className="font-bold">{USER_PROFILE.stats.followers}</p>
-                      <p className="text-sm text-muted-foreground">Followers</p>
+                      <p className="text-sm text-muted-foreground">{t('common.followers')}</p>
                     </div>
                     <div className="text-center">
                       <p className="font-bold">{USER_PROFILE.stats.following}</p>
-                      <p className="text-sm text-muted-foreground">Following</p>
+                      <p className="text-sm text-muted-foreground">{t('common.following')}</p>
                     </div>
                     <div className="text-center">
                       <p className="font-bold">{USER_PROFILE.stats.communities}</p>
-                      <p className="text-sm text-muted-foreground">Communities</p>
+                      <p className="text-sm text-muted-foreground">{t('common.communities')}</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 items-center md:items-end">
-                  <Button 
-                    variant={isFollowing ? "outline" : "default"}
-                    className={isFollowing ? 
-                      "border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30" : 
-                      "gradient-bg hover:opacity-90"
-                    }
-                    onClick={handleToggleFollow}
-                  >
-                    {isFollowing ? "Following" : "Follow"}
-                  </Button>
-                  <Button variant="outline" className="border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30">
-                    <MessageSquare className="h-4 w-4 mr-2" />
-                    Message
-                  </Button>
-                  <Button variant="ghost" size="icon" className="mt-2">
-                    <Settings className="h-4 w-4" />
-                  </Button>
+                  {isOwnProfile ? (
+                    <Button 
+                      variant="outline" 
+                      className="border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30"
+                      asChild
+                    >
+                      <Link href="/settings/profile">
+                        <Edit className="h-4 w-4 mr-2" />
+                        {t('profile.editProfile')}
+                      </Link>
+                    </Button>
+                  ) : (
+                    <>
+                      <Button 
+                        variant={isFollowing ? "outline" : "default"}
+                        className={isFollowing ? 
+                          "border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30" : 
+                          "gradient-bg hover:opacity-90"
+                        }
+                        onClick={handleToggleFollow}
+                      >
+                        {isFollowing ? t('common.following') : t('common.follow')}
+                      </Button>
+                      <Button variant="outline" className="border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30">
+                        <MessageSquare className="h-4 w-4 mr-2" />
+                        {t('profile.message')}
+                      </Button>
+                    </>
+                  )}
                 </div>
               </div>
             </CardContent>
@@ -177,28 +205,28 @@ export default function ProfilePage() {
                 className="flex items-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-indigo-500 data-[state=active]:to-purple-500 data-[state=active]:text-white"
               >
                 <MessageSquare className="mr-2 h-4 w-4" />
-                Posts
+                {t('profile.posts')}
               </TabsTrigger>
               <TabsTrigger 
                 value="likes" 
                 className="flex items-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white"
               >
                 <Heart className="mr-2 h-4 w-4" />
-                Likes
+                {t('profile.likes')}
               </TabsTrigger>
               <TabsTrigger 
                 value="bookmarks" 
                 className="flex items-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-amber-500 data-[state=active]:text-white"
               >
                 <Bookmark className="mr-2 h-4 w-4" />
-                Bookmarks
+                {t('profile.bookmarks')}
               </TabsTrigger>
               <TabsTrigger 
                 value="communities" 
                 className="flex items-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-amber-500 data-[state=active]:to-green-500 data-[state=active]:text-white"
               >
                 <User className="mr-2 h-4 w-4" />
-                Communities
+                {t('profile.communities')}
               </TabsTrigger>
             </TabsList>
             
@@ -208,9 +236,9 @@ export default function ProfilePage() {
               ))}
               {USER_POSTS.length === 0 && (
                 <div className="text-center py-12 bg-white/50 dark:bg-slate-900/50 rounded-lg border-2 shadow-sm">
-                  <h3 className="text-lg font-medium gradient-text">No posts to show</h3>
+                  <h3 className="text-lg font-medium gradient-text">{t('profile.noPosts')}</h3>
                   <p className="text-muted-foreground mt-1">
-                    Posts that you create will appear here
+                    {t('profile.tryPosting')}
                   </p>
                 </div>
               )}
@@ -218,37 +246,38 @@ export default function ProfilePage() {
             
             <TabsContent value="likes" className="space-y-4 mt-6">
               <div className="text-center py-12 bg-white/50 dark:bg-slate-900/50 rounded-lg border-2 shadow-sm">
-                <h3 className="text-lg font-medium gradient-text">No liked posts to show</h3>
+                <h3 className="text-lg font-medium gradient-text">{t('profile.noLikes')}</h3>
                 <p className="text-muted-foreground mt-1">
-                  Posts that you like will appear here
+                  {t('profile.tryLiking')}
                 </p>
               </div>
             </TabsContent>
             
             <TabsContent value="bookmarks" className="space-y-4 mt-6">
               <div className="text-center py-12 bg-white/50 dark:bg-slate-900/50 rounded-lg border-2 shadow-sm">
-                <h3 className="text-lg font-medium gradient-text">No bookmarked posts to show</h3>
+                <h3 className="text-lg font-medium gradient-text">{t('profile.noBookmarks')}</h3>
                 <p className="text-muted-foreground mt-1">
-                  Posts that you bookmark will appear here
+                  {t('profile.tryBookmarking')}
                 </p>
               </div>
             </TabsContent>
             
             <TabsContent value="communities" className="space-y-4 mt-6">
               <div className="text-center py-12 bg-white/50 dark:bg-slate-900/50 rounded-lg border-2 shadow-sm">
-                <h3 className="text-lg font-medium gradient-text">No communities to show</h3>
+                <h3 className="text-lg font-medium gradient-text">{t('profile.noCommunities')}</h3>
                 <p className="text-muted-foreground mt-1">
-                  Communities that you join will appear here
+                  {t('profile.tryJoining')}
                 </p>
               </div>
             </TabsContent>
           </Tabs>
         </main>
+        
         <aside className="hidden lg:block space-y-6">
           <Card className="border-2 hover:shadow-md transition-shadow duration-300">
             <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Similar Profiles</CardTitle>
-              <CardDescription>People you might want to follow</CardDescription>
+              <CardTitle className="text-lg">{t('profile.similarProfiles')}</CardTitle>
+              <CardDescription>{t('profile.peopleToFollow')}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -257,9 +286,7 @@ export default function ProfilePage() {
                     <div className="flex items-center space-x-3">
                       <Avatar className="h-10 w-10">
                         <AvatarImage src={`https://images.unsplash.com/photo-${1570295999919 + i}-b8c36b15f770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80`} />
-                        <AvatarFallback className="bg-gradient-to-br from-indigo-400 to-purple-400 text-white">
-                          {String.fromCharCode(64 + i)}
-                        </AvatarFallback>
+                        <AvatarFallback>{String.fromCharCode(64 + i)}</AvatarFallback>
                       </Avatar>
                       <div>
                         <p className="font-medium text-sm">User {i}</p>
@@ -267,7 +294,7 @@ export default function ProfilePage() {
                       </div>
                     </div>
                     <Button variant="outline" size="sm" className="h-8 border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30">
-                      Follow
+                      {t('common.follow')}
                     </Button>
                   </div>
                 ))}
@@ -275,15 +302,15 @@ export default function ProfilePage() {
             </CardContent>
             <CardFooter>
               <Button variant="ghost" size="sm" className="w-full text-indigo-500 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950/30">
-                Show more
+                {t('profile.showMore')}
               </Button>
             </CardFooter>
           </Card>
           
           <Card className="border-2 hover:shadow-md transition-shadow duration-300">
             <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Active Communities</CardTitle>
-              <CardDescription>Communities you're active in</CardDescription>
+              <CardTitle className="text-lg">{t('profile.activeCommunities')}</CardTitle>
+              <CardDescription>{t('profile.communities')}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -299,11 +326,11 @@ export default function ProfilePage() {
                       </div>
                       <div>
                         <p className="font-medium text-sm">c/{community}</p>
-                        <p className="text-xs text-muted-foreground">{(10 - i) * 1000} members</p>
+                        <p className="text-xs text-muted-foreground">{(10 - i) * 1000} {t('profile.members')}</p>
                       </div>
                     </div>
                     <Button variant="ghost" size="sm" className="h-8 hover:text-indigo-600">
-                      View
+                      {t('common.view')}
                     </Button>
                   </div>
                 ))}
@@ -311,7 +338,7 @@ export default function ProfilePage() {
             </CardContent>
             <CardFooter>
               <Button variant="ghost" size="sm" className="w-full text-indigo-500 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950/30">
-                Show more
+                {t('profile.showMore')}
               </Button>
             </CardFooter>
           </Card>

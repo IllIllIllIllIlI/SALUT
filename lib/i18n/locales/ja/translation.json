@@ -35,7 +35,10 @@
     "forYou": "あなたへのおすすめ",
     "sos": "SOS",
     "followers": "フォロワー",
-    "following": "フォロー中"
+    "following": "フォロー中",
+    "messages": "メッセージ",
+    "view": "表示",
+    "verified": "認証済み"
   },
   "auth": {
     "email": "メールアドレス",
@@ -50,121 +53,99 @@
     "signInWith": "サインイン方法",
     "signUpWith": "サインアップ方法",
     "termsAndConditions": "サインアップすることで、利用規約に同意したことになります",
-    "privacyPolicy": "プライバシーポリシー"
+    "privacyPolicy": "プライバシーポリシー",
+    "enterCredentials": "メールアドレスとパスワードを入力してサインインしてください",
+    "signIn": "サインイン",
+    "signUp": "サインアップ"
   },
-  "premium": {
-    "title": "SALUT プレミアム",
-    "subtitle": "限定機能と特典をアンロック",
-    "getVerified": "認証を取得",
-    "verified": "認証済み",
-    "features": {
-      "title": "プレミアム機能",
-      "verifiedBadge": "認証バッジ",
-      "verifiedBadgeDesc": "名前の横に青いチェックマークを表示して目立ちます",
-      "unlimitedAI": "AIアシスタントメッセージ無制限",
-      "unlimitedAIDesc": "AI生成レスポンスに制限なし",
-      "priorityReplies": "返信とトレンドトピックでの優先表示",
-      "priorityRepliesDesc": "あなたのコンテンツがより多くの人に見られます",
-      "adFree": "広告なし体験",
-      "adFreeDesc": "広告なしでSALUTをお楽しみいただけます",
-      "earlyAccess": "新機能への早期アクセス",
-      "earlyAccessDesc": "新しいプラットフォーム機能をいち早くお試しいただけます"
-    },
-    "pricing": {
-      "monthly": "月額",
-      "yearly": "年額",
-      "yearlyDiscount": "16%お得",
-      "perMonth": "月あたり",
-      "billedAs": "年間{{price}}として請求されます",
-      "subscribe": "購読する",
-      "currentPlan": "現在のプラン",
-      "switchPlan": "プラン変更",
-      "managePlan": "サブスクリプション管理",
-      "nextBilling": "次回請求日",
-      "cancelSubscription": "サブスクリプションをキャンセル"
-    },
-    "payment": {
-      "title": "支払い情報",
-      "cardNumber": "カード番号",
-      "cardholderName": "カード所有者名",
-      "expiryDate": "有効期限",
-      "cvv": "セキュリティコード",
-      "billingAddress": "請求先住所",
-      "country": "国",
-      "zipCode": "郵便番号",
-      "paymentMethods": "支払い方法",
-      "securePayment": "安全な支払い",
-      "processingPayment": "支払い処理中...",
-      "paymentSuccess": "支払い成功！",
-      "paymentFailed": "支払いに失敗しました。もう一度お試しください。"
-    },
-    "limits": {
-      "freeMessages": "今月は無料AIメッセージが{{total}}件中{{remaining}}件残っています",
-      "upgradeNow": "無制限のAIメッセージにアクセスするにはプレミアムにアップグレードしてください",
-      "limitReached": "今月の無料AIメッセージの上限に達しました"
-    }
+  "feed": {
+    "forYou": "あなたへのおすすめ",
+    "following": "フォロー中",
+    "noPosts": "投稿がありません",
+    "refresh": "更新",
+    "loadMore": "もっと読み込む",
+    "readMore": "続きを読む"
+  },
+  "trending": {
+    "title": "トレンド",
+    "noTopics": "トレンドのトピックがありません",
+    "postsCount": "{{count}}件の投稿"
   },
   "settings": {
-    "account": "アカウント",
-    "appearance": "外観",
-    "language": "言語",
-    "notifications": "通知",
-    "privacy": "プライバシー",
-    "security": "セキュリティ",
-    "subscription": "サブスクリプション",
     "theme": {
       "title": "テーマ",
       "light": "ライト",
       "dark": "ダーク",
       "system": "システム"
     },
-    "languages": {
-      "en": "English",
-      "es": "Español",
-      "fr": "Français",
-      "de": "Deutsch",
-      "ja": "日本語",
-      "pt": "Português",
-      "hi": "हिन्दी"
-    }
+    "subscription": "サブスクリプション"
   },
-  "bookmarks": {
-    "folders": "フォルダ",
+  "profile": {
+    "posts": "投稿",
+    "likes": "いいね",
     "bookmarks": "ブックマーク",
-    "newFolder": "新規フォルダ",
-    "addFolder": "フォルダを追加",
-    "searchPlaceholder": "ブックマークを検索...",
-    "moveToFolder": "フォルダに移動",
-    "addNote": "メモを追加",
-    "removeBookmark": "ブックマークを削除",
-    "noBookmarksFound": "ブックマークが見つかりません",
-    "tryDifferentSearch": "別の検索語を試してください",
-    "bookmarkPostsToSee": "投稿をブックマークするとここに表示されます",
-    "grid": "グリッド",
-    "list": "リスト"
+    "communities": "コミュニティ",
+    "joinedDate": "登録日",
+    "website": "ウェブサイト",
+    "location": "場所",
+    "editProfile": "プロフィールを編集",
+    "message": "メッセージ",
+    "noPosts": "投稿がありません",
+    "noLikes": "いいねした投稿がありません",
+    "noBookmarks": "ブックマークした投稿がありません",
+    "noCommunities": "参加しているコミュニティがありません",
+    "tryPosting": "投稿するとここに表示されます",
+    "tryLiking": "いいねした投稿がここに表示されます",
+    "tryBookmarking": "ブックマークした投稿がここに表示されます",
+    "tryJoining": "参加したコミュニティがここに表示されます",
+    "similarProfiles": "似ているプロフィール",
+    "peopleToFollow": "おすすめのユーザー",
+    "activeCommunities": "アクティブなコミュニティ",
+    "showMore": "もっと見る",
+    "members": "メンバー"
+  },
+  "premium": {
+    "title": "SALUT Premium",
+    "subtitle": "プレミアム機能を解除して、より良い体験を",
+    "limits": {
+      "freeMessages": "今月の無料AI メッセージは残り{{remaining}}/{{total}}件です",
+      "upgradeNow": "プレミアムにアップグレードして無制限のAIメッセージを利用"
+    },
+    "pricing": {
+      "monthly": "月額",
+      "perMonth": "月あたり",
+      "yearly": "年額",
+      "yearlyDiscount": "16%お得",
+      "billedAs": "年間{{price}}として請求",
+      "subscribe": "購読する",
+      "currentPlan": "現在のプラン",
+      "switchPlan": "プラン変更"
+    },
+    "features": {
+      "title": "プレミアム機能",
+      "verifiedBadge": "認証バッジ",
+      "verifiedBadgeDesc": "名前の横に青いチェックマークを表示",
+      "unlimitedAI": "無制限のAIアシスタントメッセージ",
+      "unlimitedAIDesc": "AI生成の応答に制限なし",
+      "priorityReplies": "返信とトレンドトピックの優先表示",
+      "priorityRepliesDesc": "より多くの人があなたのコンテンツを見ることができます",
+      "adFree": "広告なし体験",
+      "adFreeDesc": "広告なしでSALUTを楽しむ",
+      "earlyAccess": "新機能への早期アクセス",
+      "earlyAccessDesc": "新しいプラットフォーム機能をいち早く試す"
+    },
+    "getVerified": "認証を取得"
   },
   "messages": {
     "title": "メッセージ",
     "searchPlaceholder": "メッセージを検索...",
-    "all": "すべて",
+    "all": "すべてのメッセージ",
     "unread": "未読",
+    "typePlaceholder": "メッセージを入力...",
     "noResults": "会話が見つかりません",
     "noUnread": "未読メッセージはありません",
     "noConversationSelected": "会話を選択",
-    "startConversation": "サイドバーから会話を選択するか、新しい会話を開始してください",
-    "newMessage": "新規メッセージ",
-    "typePlaceholder": "メッセージを入力...",
-    "online": "オンライン",
-    "offline": "オフライン",
-    "typing": "入力中...",
-    "members": "メンバー",
-    "createGroup": "グループを作成",
-    "addMembers": "メンバーを追加",
-    "leaveGroup": "グループを退出",
-    "deleteConversation": "会話を削除",
-    "blockUser": "ユーザーをブロック",
-    "reportUser": "ユーザーを報告",
-    "endToEndEncrypted": "エンドツーエンド暗号化",
-    "messageEncryption": "メッセージはエンドツーエンド暗号化されています。この会話の外部の誰も、SALUTでさえも読むことはできません。"
+    "startConversation": "サイドバーから会話を選択するか、新しい会話を開始",
+    "newMessage": "新規メッセージ"
   }
 }

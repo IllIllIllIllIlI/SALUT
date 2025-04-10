@@ -33,7 +33,12 @@
     "latest": "Recientes",
     "popular": "Populares",
     "forYou": "Para ti",
-    "sos": "SOS"
+    "sos": "SOS",
+    "followers": "Seguidores",
+    "following": "Siguiendo",
+    "messages": "Mensajes",
+    "view": "Ver",
+    "verified": "Verificado"
   },
   "auth": {
     "email": "Correo electrónico",
@@ -48,19 +53,80 @@
     "signInWith": "Iniciar sesión con",
     "signUpWith": "Registrarse con",
     "termsAndConditions": "Al registrarte, aceptas nuestros Términos y Condiciones",
-    "privacyPolicy": "Política de Privacidad"
+    "privacyPolicy": "Política de Privacidad",
+    "enterCredentials": "Ingresa tu correo electrónico y contraseña para iniciar sesión",
+    "signIn": "Iniciar Sesión",
+    "signUp": "Registrarse"
+  },
+  "feed": {
+    "forYou": "Para ti",
+    "following": "Siguiendo",
+    "noPosts": "No hay publicaciones para mostrar",
+    "refresh": "Actualizar",
+    "loadMore": "Cargar más",
+    "readMore": "Leer más"
+  },
+  "trending": {
+    "title": "Tendencias",
+    "noTopics": "No hay temas en tendencia",
+    "postsCount": "{{count}} publicaciones"
+  },
+  "settings": {
+    "theme": {
+      "title": "Tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "subscription": "Suscripción"
+  },
+  "profile": {
+    "posts": "Publicaciones",
+    "likes": "Me gusta",
+    "bookmarks": "Marcadores",
+    "communities": "Comunidades",
+    "joinedDate": "Se unió",
+    "website": "Sitio web",
+    "location": "Ubicación",
+    "editProfile": "Editar perfil",
+    "message": "Mensaje",
+    "noPosts": "No hay publicaciones para mostrar",
+    "noLikes": "No hay publicaciones que te gusten para mostrar",
+    "noBookmarks": "No hay marcadores para mostrar",
+    "noCommunities": "No hay comunidades para mostrar",
+    "tryPosting": "Las publicaciones que crees aparecerán aquí",
+    "tryLiking": "Las publicaciones que te gusten aparecerán aquí",
+    "tryBookmarking": "Las publicaciones que marques aparecerán aquí",
+    "tryJoining": "Las comunidades a las que te unas aparecerán aquí",
+    "similarProfiles": "Perfiles similares",
+    "peopleToFollow": "Personas que quizás quieras seguir",
+    "activeCommunities": "Comunidades activas",
+    "showMore": "Mostrar más",
+    "members": "miembros"
   },
   "premium": {
     "title": "SALUT Premium",
-    "subtitle": "Desbloquea funciones y beneficios exclusivos",
-    "getVerified": "Verificarse",
-    "verified": "Verificado",
+    "subtitle": "Desbloquea funciones exclusivas y mejora tu experiencia",
+    "limits": {
+      "freeMessages": "Te quedan {{remaining}} de {{total}} mensajes AI gratuitos este mes",
+      "upgradeNow": "Actualiza a Premium para mensajes AI ilimitados"
+    },
+    "pricing": {
+      "monthly": "Mensual",
+      "perMonth": "por mes",
+      "yearly": "Anual",
+      "yearlyDiscount": "Ahorra 16%",
+      "billedAs": "Facturado como {{price}} por año",
+      "subscribe": "Suscribirse",
+      "currentPlan": "Plan Actual",
+      "switchPlan": "Cambiar Plan"
+    },
     "features": {
-      "title": "Funciones Premium",
-      "verifiedBadge": "Insignia de Verificación",
+      "title": "Características Premium",
+      "verifiedBadge": "Insignia Verificada",
       "verifiedBadgeDesc": "Destaca con una marca de verificación azul junto a tu nombre",
-      "unlimitedAI": "Mensajes Ilimitados del Asistente IA",
-      "unlimitedAIDesc": "Sin límites en las respuestas generadas por IA",
+      "unlimitedAI": "Mensajes de Asistente AI Ilimitados",
+      "unlimitedAIDesc": "Sin límites en las respuestas generadas por AI",
       "priorityReplies": "Prioridad en Respuestas y Temas Tendencia",
       "priorityRepliesDesc": "Tu contenido es visto por más personas",
       "adFree": "Experiencia Sin Anuncios",
@@ -68,101 +134,18 @@
       "earlyAccess": "Acceso Anticipado a Nuevas Funciones",
       "earlyAccessDesc": "Sé el primero en probar las nuevas funciones de la plataforma"
     },
-    "pricing": {
-      "monthly": "Mensual",
-      "yearly": "Anual",
-      "yearlyDiscount": "Ahorra 16%",
-      "perMonth": "por mes",
-      "billedAs": "Facturado como {{price}} por año",
-      "subscribe": "Suscribirse",
-      "currentPlan": "Plan Actual",
-      "switchPlan": "Cambiar Plan",
-      "managePlan": "Administrar Suscripción",
-      "nextBilling": "Próxima fecha de facturación",
-      "cancelSubscription": "Cancelar Suscripción"
-    },
-    "payment": {
-      "title": "Información de Pago",
-      "cardNumber": "Número de Tarjeta",
-      "cardholderName": "Nombre del Titular",
-      "expiryDate": "Fecha de Vencimiento",
-      "cvv": "CVV",
-      "billingAddress": "Dirección de Facturación",
-      "country": "País",
-      "zipCode": "Código Postal",
-      "paymentMethods": "Métodos de Pago",
-      "securePayment": "Pago Seguro",
-      "processingPayment": "Procesando pago...",
-      "paymentSuccess": "¡Pago exitoso!",
-      "paymentFailed": "Pago fallido. Por favor, inténtalo de nuevo."
-    },
-    "limits": {
-      "freeMessages": "Te quedan {{remaining}} de {{total}} mensajes gratuitos de IA este mes",
-      "upgradeNow": "Actualiza a Premium para mensajes ilimitados de IA",
-      "limitReached": "Has alcanzado tu límite mensual de mensajes gratuitos de IA"
-    }
-  },
-  "settings": {
-    "account": "Cuenta",
-    "appearance": "Apariencia",
-    "language": "Idioma",
-    "notifications": "Notificaciones",
-    "privacy": "Privacidad",
-    "security": "Seguridad",
-    "subscription": "Suscripción",
-    "theme": {
-      "title": "Tema",
-      "light": "Claro",
-      "dark": "Oscuro",
-      "system": "Sistema"
-    },
-    "languages": {
-      "en": "English",
-      "es": "Español",
-      "fr": "Français",
-      "de": "Deutsch",
-      "ja": "日本語",
-      "pt": "Português",
-      "hi": "हिन्दी"
-    }
-  },
-  "bookmarks": {
-    "folders": "Carpetas",
-    "bookmarks": "Marcadores",
-    "newFolder": "Nueva Carpeta",
-    "addFolder": "Añadir Carpeta",
-    "searchPlaceholder": "Buscar marcadores...",
-    "moveToFolder": "Mover a carpeta",
-    "addNote": "Añadir nota",
-    "removeBookmark": "Eliminar marcador",
-    "noBookmarksFound": "No se encontraron marcadores",
-    "tryDifferentSearch": "Intenta con otro término de búsqueda",
-    "bookmarkPostsToSee": "Guarda publicaciones para verlas aquí",
-    "grid": "Cuadrícula",
-    "list": "Lista"
+    "getVerified": "Verificar cuenta"
   },
   "messages": {
     "title": "Mensajes",
     "searchPlaceholder": "Buscar mensajes...",
-    "all": "Todos",
+    "all": "Todos los mensajes",
     "unread": "No leídos",
+    "typePlaceholder": "Escribe un mensaje...",
     "noResults": "No se encontraron conversaciones",
     "noUnread": "No hay mensajes sin leer",
     "noConversationSelected": "Selecciona una conversación",
     "startConversation": "Elige una conversación de la barra lateral o inicia una nueva",
-    "newMessage": "Nuevo Mensaje",
-    "typePlaceholder": "Escribe un mensaje...",
-    "online": "En línea",
-    "offline": "Desconectado",
-    "typing": "escribiendo...",
-    "members": "miembros",
-    "createGroup": "Crear Grupo",
-    "addMembers": "Añadir Miembros",
-    "leaveGroup": "Abandonar Grupo",
-    "deleteConversation": "Eliminar Conversación",
-    "blockUser": "Bloquear Usuario",
-    "reportUser": "Reportar Usuario",
-    "endToEndEncrypted": "Cifrado de extremo a extremo",
-    "messageEncryption": "Los mensajes están cifrados de extremo a extremo. Nadie fuera de este chat, ni siquiera SALUT, puede leerlos."
+    "newMessage": "Nuevo mensaje"
   }
 }

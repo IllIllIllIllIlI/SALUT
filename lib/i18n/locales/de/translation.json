@@ -35,7 +35,10 @@
     "forYou": "Für dich",
     "sos": "SOS",
     "followers": "Follower",
-    "following": "Folgt"
+    "following": "Folgt",
+    "messages": "Nachrichten",
+    "view": "Ansehen",
+    "verified": "Verifiziert"
   },
   "auth": {
     "email": "E-Mail",
@@ -50,121 +53,99 @@
     "signInWith": "Anmelden mit",
     "signUpWith": "Registrieren mit",
     "termsAndConditions": "Mit der Registrierung akzeptieren Sie unsere Nutzungsbedingungen",
-    "privacyPolicy": "Datenschutzrichtlinie"
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "enterCredentials": "Geben Sie Ihre E-Mail und Ihr Passwort ein, um sich anzumelden",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren"
+  },
+  "feed": {
+    "forYou": "Für dich",
+    "following": "Folgend",
+    "noPosts": "Keine Beiträge zum Anzeigen",
+    "refresh": "Aktualisieren",
+    "loadMore": "Mehr laden",
+    "readMore": "Weiterlesen"
+  },
+  "trending": {
+    "title": "Trending",
+    "noTopics": "Keine Trending-Themen",
+    "postsCount": "{{count}} Beiträge"
+  },
+  "settings": {
+    "theme": {
+      "title": "Theme",
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    },
+    "subscription": "Abonnement"
+  },
+  "profile": {
+    "posts": "Beiträge",
+    "likes": "Gefällt mir",
+    "bookmarks": "Lesezeichen",
+    "communities": "Gemeinschaften",
+    "joinedDate": "Beigetreten",
+    "website": "Webseite",
+    "location": "Standort",
+    "editProfile": "Profil bearbeiten",
+    "message": "Nachricht",
+    "noPosts": "Keine Beiträge zum Anzeigen",
+    "noLikes": "Keine Beiträge mit 'Gefällt mir' zum Anzeigen",
+    "noBookmarks": "Keine Lesezeichen zum Anzeigen",
+    "noCommunities": "Keine Gemeinschaften zum Anzeigen",
+    "tryPosting": "Beiträge, die Sie erstellen, erscheinen hier",
+    "tryLiking": "Beiträge, die Ihnen gefallen, erscheinen hier",
+    "tryBookmarking": "Beiträge, die Sie als Lesezeichen speichern, erscheinen hier",
+    "tryJoining": "Gemeinschaften, denen Sie beitreten, erscheinen hier",
+    "similarProfiles": "Ähnliche Profile",
+    "peopleToFollow": "Personen, denen Sie folgen könnten",
+    "activeCommunities": "Aktive Gemeinschaften",
+    "showMore": "Mehr anzeigen",
+    "members": "Mitglieder"
   },
   "premium": {
     "title": "SALUT Premium",
-    "subtitle": "Schalten Sie exklusive Funktionen und Vorteile frei",
-    "getVerified": "Verifizieren lassen",
-    "verified": "Verifiziert",
+    "subtitle": "Schalten Sie exklusive Funktionen frei und verbessern Sie Ihr Erlebnis",
+    "limits": {
+      "freeMessages": "Sie haben noch {{remaining}} von {{total}} kostenlosen KI-Nachrichten in diesem Monat",
+      "upgradeNow": "Upgrade auf Premium für unbegrenzte KI-Nachrichten"
+    },
+    "pricing": {
+      "monthly": "Monatlich",
+      "perMonth": "pro Monat",
+      "yearly": "Jährlich",
+      "yearlyDiscount": "16% sparen",
+      "billedAs": "Abgerechnet als {{price}} pro Jahr",
+      "subscribe": "Abonnieren",
+      "currentPlan": "Aktueller Plan",
+      "switchPlan": "Plan wechseln"
+    },
     "features": {
       "title": "Premium-Funktionen",
       "verifiedBadge": "Verifiziertes Abzeichen",
       "verifiedBadgeDesc": "Heben Sie sich mit einem blauen Häkchen neben Ihrem Namen ab",
       "unlimitedAI": "Unbegrenzte KI-Assistenten-Nachrichten",
-      "unlimitedAIDesc": "Keine Begrenzung für KI-generierte Antworten",
+      "unlimitedAIDesc": "Keine Beschränkungen bei KI-generierten Antworten",
       "priorityReplies": "Priorität bei Antworten & Trending-Themen",
-      "priorityRepliesDesc": "Ihre Inhalte werden von mehr Personen gesehen",
+      "priorityRepliesDesc": "Ihr Inhalt wird von mehr Menschen gesehen",
       "adFree": "Werbefreie Erfahrung",
       "adFreeDesc": "Genießen Sie SALUT ohne Werbung",
       "earlyAccess": "Frühzeitiger Zugang zu neuen Funktionen",
-      "earlyAccessDesc": "Seien Sie der Erste, der neue Plattformfunktionen ausprobiert"
+      "earlyAccessDesc": "Testen Sie als Erster neue Plattform-Funktionen"
     },
-    "pricing": {
-      "monthly": "Monatlich",
-      "yearly": "Jährlich",
-      "yearlyDiscount": "Sparen Sie 16%",
-      "perMonth": "pro Monat",
-      "billedAs": "Abgerechnet als {{price}} pro Jahr",
-      "subscribe": "Abonnieren",
-      "currentPlan": "Aktueller Plan",
-      "switchPlan": "Plan wechseln",
-      "managePlan": "Abonnement verwalten",
-      "nextBilling": "Nächstes Abrechnungsdatum",
-      "cancelSubscription": "Abonnement kündigen"
-    },
-    "payment": {
-      "title": "Zahlungsinformationen",
-      "cardNumber": "Kartennummer",
-      "cardholderName": "Name des Karteninhabers",
-      "expiryDate": "Ablaufdatum",
-      "cvv": "CVV",
-      "billingAddress": "Rechnungsadresse",
-      "country": "Land",
-      "zipCode": "Postleitzahl",
-      "paymentMethods": "Zahlungsmethoden",
-      "securePayment": "Sichere Zahlung",
-      "processingPayment": "Zahlung wird verarbeitet...",
-      "paymentSuccess": "Zahlung erfolgreich!",
-      "paymentFailed": "Zahlung fehlgeschlagen. Bitte versuchen Sie es erneut."
-    },
-    "limits": {
-      "freeMessages": "Sie haben noch {{remaining}} von {{total}} kostenlosen KI-Nachrichten in diesem Monat",
-      "upgradeNow": "Upgraden Sie auf Premium für unbegrenzte KI-Nachrichten",
-      "limitReached": "Sie haben Ihr monatliches Limit an kostenlosen KI-Nachrichten erreicht"
-    }
-  },
-  "settings": {
-    "account": "Konto",
-    "appearance": "Erscheinungsbild",
-    "language": "Sprache",
-    "notifications": "Benachrichtigungen",
-    "privacy": "Datenschutz",
-    "security": "Sicherheit",
-    "subscription": "Abonnement",
-    "theme": {
-      "title": "Thema",
-      "light": "Hell",
-      "dark": "Dunkel",
-      "system": "System"
-    },
-    "languages": {
-      "en": "English",
-      "es": "Español",
-      "fr": "Français",
-      "de": "Deutsch",
-      "ja": "日本語",
-      "pt": "Português",
-      "hi": "हिन्दी"
-    }
-  },
-  "bookmarks": {
-    "folders": "Ordner",
-    "bookmarks": "Lesezeichen",
-    "newFolder": "Neuer Ordner",
-    "addFolder": "Ordner hinzufügen",
-    "searchPlaceholder": "Lesezeichen durchsuchen...",
-    "moveToFolder": "In Ordner verschieben",
-    "addNote": "Notiz hinzufügen",
-    "removeBookmark": "Lesezeichen entfernen",
-    "noBookmarksFound": "Keine Lesezeichen gefunden",
-    "tryDifferentSearch": "Versuchen Sie einen anderen Suchbegriff",
-    "bookmarkPostsToSee": "Speichern Sie Beiträge als Lesezeichen, um sie hier zu sehen",
-    "grid": "Raster",
-    "list": "Liste"
+    "getVerified": "Verifizierung erhalten"
   },
   "messages": {
     "title": "Nachrichten",
     "searchPlaceholder": "Nachrichten durchsuchen...",
-    "all": "Alle",
+    "all": "Alle Nachrichten",
     "unread": "Ungelesen",
+    "typePlaceholder": "Nachricht schreiben...",
     "noResults": "Keine Konversationen gefunden",
     "noUnread": "Keine ungelesenen Nachrichten",
     "noConversationSelected": "Wählen Sie eine Konversation aus",
-    "startConversation": "Wählen Sie eine Konversation aus der Seitenleiste oder beginnen Sie eine neue",
-    "newMessage": "Neue Nachricht",
-    "typePlaceholder": "Nachricht eingeben...",
-    "online": "Online",
-    "offline": "Offline",
-    "typing": "schreibt...",
-    "members": "Mitglieder",
-    "createGroup": "Gruppe erstellen",
-    "addMembers": "Mitglieder hinzufügen",
-    "leaveGroup": "Gruppe verlassen",
-    "deleteConversation": "Konversation löschen",
-    "blockUser": "Benutzer blockieren",
-    "reportUser": "Benutzer melden",
-    "endToEndEncrypted": "Ende-zu-Ende-verschlüsselt",
-    "messageEncryption": "Nachrichten sind Ende-zu-Ende-verschlüsselt. Niemand außerhalb dieses Chats, nicht einmal SALUT, kann sie lesen."
+    "startConversation": "Wählen Sie eine Konversation aus der Seitenleiste oder starten Sie eine neue",
+    "newMessage": "Neue Nachricht"
   }
 }

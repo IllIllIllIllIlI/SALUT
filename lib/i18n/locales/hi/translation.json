@@ -13,6 +13,7 @@
     "signOut": "साइन आउट",
     "search": "खोजें",
     "post": "पोस्ट",
+    
     "comment": "टिप्पणी",
     "like": "पसंद",
     "share": "शेयर",
@@ -35,7 +36,10 @@
     "forYou": "आपके लिए",
     "sos": "SOS",
     "followers": "फॉलोवर्स",
-    "following": "फॉलोइंग"
+    "following": "फॉलो कर रहे हैं",
+    "messages": "संदेश",
+    "view": "देखें",
+    "verified": "सत्यापित"
   },
   "auth": {
     "email": "ईमेल",
@@ -50,121 +54,99 @@
     "signInWith": "इसके साथ साइन इन करें",
     "signUpWith": "इसके साथ साइन अप करें",
     "termsAndConditions": "साइन अप करके, आप हमारे नियम और शर्तों से सहमत हैं",
-    "privacyPolicy": "गोपनीयता नीति"
+    "privacyPolicy": "गोपनीयता नीति",
+    "enterCredentials": "साइन इन करने के लिए अपना ईमेल और पासवर्ड दर्ज करें",
+    "signIn": "साइन इन",
+    "signUp": "साइन अप"
   },
-  "premium": {
-    "title": "SALUT प्रीमियम",
-    "subtitle": "विशेष सुविधाओं और लाभों को अनलॉक करें",
-    "getVerified": "वेरिफाई करें",
-    "verified": "वेरिफाइड",
-    "features": {
-      "title": "प्रीमियम सुविधाएँ",
-      "verifiedBadge": "वेरिफाइड बैज",
-      "verifiedBadgeDesc": "अपने नाम के बगल में नीले टिक के साथ अलग दिखें",
-      "unlimitedAI": "असीमित AI असिस्टेंट मैसेज",
-      "unlimitedAIDesc": "AI द्वारा जनरेट किए गए जवाबों पर कोई सीमा नहीं",
-      "priorityReplies": "जवाबों और ट्रेंडिंग विषयों में प्राथमिकता",
-      "priorityRepliesDesc": "आपकी सामग्री अधिक लोगों द्वारा देखी जाती है",
-      "adFree": "विज्ञापन-मुक्त अनुभव",
-      "adFreeDesc": "SALUT का बिना किसी विज्ञापन के आनंद लें",
-      "earlyAccess": "नई सुविधाओं तक पहले एक्सेस",
-      "earlyAccessDesc": "प्लेटफॉर्म की नई सुविधाओं को सबसे पहले आजमाएं"
-    },
-    "pricing": {
-      "monthly": "मासिक",
-      "yearly": "वार्षिक",
-      "yearlyDiscount": "16% बचाएं",
-      "perMonth": "प्रति माह",
-      "billedAs": "{{price}} प्रति वर्ष के रूप में बिल किया जाता है",
-      "subscribe": "सब्सक्राइब",
-      "currentPlan": "वर्तमान प्लान",
-      "switchPlan": "प्लान बदलें",
-      "managePlan": "सब्सक्रिप्शन प्रबंधित करें",
-      "nextBilling": "अगली बिलिंग तिथि",
-      "cancelSubscription": "सब्सक्रिप्शन रद्द करें"
-    },
-    "payment": {
-      "title": "भुगतान जानकारी",
-      "cardNumber": "कार्ड नंबर",
-      "cardholderName": "कार्डधारक का नाम",
-      "expiryDate": "समाप्ति तिथि",
-      "cvv": "CVV",
-      "billingAddress": "बिलिंग पता",
-      "country": "देश",
-      "zipCode": "पिन कोड",
-      "paymentMethods": "भुगतान के तरीके",
-      "securePayment": "सुरक्षित भुगतान",
-      "processingPayment": "भुगतान प्रोसेस हो रहा है...",
-      "paymentSuccess": "भुगतान सफल!",
-      "paymentFailed": "भुगतान विफल। कृपया पुनः प्रयास करें।"
-    },
-    "limits": {
-      "freeMessages": "आपके पास इस महीने {{total}} में से {{remaining}} मुफ्त AI मैसेज शेष हैं",
-      "upgradeNow": "असीमित AI मैसेज के लिए प्रीमियम पर अपग्रेड करें",
-      "limitReached": "आपने अपने मासिक मुफ्त AI मैसेज की सीमा तक पहुंच गए हैं"
-    }
+  "feed": {
+    "forYou": "आपके लिए",
+    "following": "फॉलोइंग",
+    "noPosts": "दिखाने के लिए कोई पोस्ट नहीं है",
+    "refresh": "रीफ्रेश करें",
+    "loadMore": "और लोड करें",
+    "readMore": "और पढ़ें"
+  },
+  "trending": {
+    "title": "ट्रेंडिंग",
+    "noTopics": "कोई ट्रेंडिंग टॉपिक नहीं है",
+    "postsCount": "{{count}} पोस्ट"
   },
   "settings": {
-    "account": "अकाउंट",
-    "appearance": "दिखावट",
-    "language": "भाषा",
-    "notifications": "सूचनाएँ",
-    "privacy": "गोपनीयता",
-    "security": "सुरक्षा",
-    "subscription": "सब्सक्रिप्शन",
     "theme": {
       "title": "थीम",
       "light": "लाइट",
       "dark": "डार्क",
       "system": "सिस्टम"
     },
-    "languages": {
-      "en": "English",
-      "es": "Español",
-      "fr": "Français",
-      "de": "Deutsch",
-      "ja": "日本語",
-      "pt": "Português",
-      "hi": "हिन्दी"
-    }
+    "subscription": "सदस्यता"
   },
-  "bookmarks": {
-    "folders": "फोल्डर्स",
-    "bookmarks": "बुकमार्क्स",
-    "newFolder": "नया फोल्डर",
-    "addFolder": "फोल्डर जोड़ें",
-    "searchPlaceholder": "बुकमार्क्स खोजें...",
-    "moveToFolder": "फोल्डर में ले जाएं",
-    "addNote": "नोट जोड़ें",
-    "removeBookmark": "बुकमार्क हटाएं",
-    "noBookmarksFound": "कोई बुकमार्क नहीं मिला",
-    "tryDifferentSearch": "अलग सर्च टर्म आज़माएं",
-    "bookmarkPostsToSee": "पोस्ट को बुकमार्क करें ताकि उन्हें यहां देख सकें",
-    "grid": "ग्रिड",
-    "list": "सूची"
+  "profile": {
+    "posts": "पोस्ट",
+    "likes": "पसंद",
+    "bookmarks": "बुकमार्क",
+    "communities": "समुदाय",
+    "joinedDate": "शामिल हुए",
+    "website": "वेबसाइट",
+    "location": "स्थान",
+    "editProfile": "प्रोफ़ाइल संपादित करें",
+    "message": "संदेश",
+    "noPosts": "कोई पोस्ट नहीं दिखाने के लिए",
+    "noLikes": "कोई पसंद की गई पोस्ट नहीं दिखाने के लिए",
+    "noBookmarks": "कोई बुकमार्क नहीं दिखाने के लिए",
+    "noCommunities": "कोई समुदाय नहीं दिखाने के लिए",
+    "tryPosting": "आपके द्वारा बनाई गई पोस्ट यहां दिखाई देंगी",
+    "tryLiking": "आपके द्वारा पसंद की गई पोस्ट यहां दिखाई देंगी",
+    "tryBookmarking": "आपके द्वारा बुकमार्क की गई पोस्ट यहां दिखाई देंगी",
+    "tryJoining": "आपके द्वारा शामिल किए गए समुदाय यहां दिखाई देंगे",
+    "similarProfiles": "समान प्रोफाइल",
+    "peopleToFollow": "जिन लोगों को आप फॉलो कर सकते हैं",
+    "activeCommunities": "सक्रिय समुदाय",
+    "showMore": "और दिखाएं",
+    "members": "सदस्य"
+  },
+  "premium": {
+    "title": "SALUT प्रीमियम",
+    "subtitle": "विशेष सुविधाएं अनलॉक करें और अपना अनुभव बेहतर बनाएं",
+    "limits": {
+      "freeMessages": "इस महीने आपके पास {{total}} में से {{remaining}} मुफ्त AI संदेश बचे हैं",
+      "upgradeNow": "असीमित AI संदेशों के लिए प्रीमियम पर अपग्रेड करें"
+    },
+    "pricing": {
+      "monthly": "मासिक",
+      "perMonth": "प्रति माह",
+      "yearly": "वार्षिक",
+      "yearlyDiscount": "16% बचाएं",
+      "billedAs": "{{price}} प्रति वर्ष के रूप में बिल किया जाएगा",
+      "subscribe": "सदस्यता लें",
+      "currentPlan": "वर्तमान योजना",
+      "switchPlan": "योजना बदलें"
+    },
+    "features": {
+      "title": "प्रीमियम सुविधाएं",
+      "verifiedBadge": "सत्यापित बैज",
+      "verifiedBadgeDesc": "अपने नाम के बगल में नीले टिक के साथ अलग दिखें",
+      "unlimitedAI": "असीमित AI सहायक संदेश",
+      "unlimitedAIDesc": "AI द्वारा जनरेट की गई प्रतिक्रियाओं पर कोई सीमा नहीं",
+      "priorityReplies": "जवाबों और ट्रेंडिंग टॉपिक्स में प्राथमिकता",
+      "priorityRepliesDesc": "आपकी सामग्री को अधिक लोग देखते हैं",
+      "adFree": "विज्ञापन मुक्त अनुभव",
+      "adFreeDesc": "SALUT का आनंद बिना किसी विज्ञापन के लें",
+      "earlyAccess": "नई सुविधाओं तक पहले एक्सेस",
+      "earlyAccessDesc": "प्लेटफॉर्म की नई सुविधाओं को सबसे पहले आजमाएं"
+    },
+    "getVerified": "सत्यापित करवाएं"
   },
   "messages": {
     "title": "संदेश",
     "searchPlaceholder": "संदेश खोजें...",
-    "all": "सभी",
+    "all": "सभी संदेश",
     "unread": "अपठित",
-    "noResults": "कोई वार्तालाप नहीं मिला",
+    "typePlaceholder": "संदेश टाइप करें...",
+    "noResults": "कोई वार्तालाप नहीं मिली",
     "noUnread": "कोई अपठित संदेश नहीं",
     "noConversationSelected": "एक वार्तालाप चुनें",
-    "startConversation": "साइडबार से एक वार्तालाप चुनें या एक नया शुरू करें",
-    "newMessage": "नया संदेश",
-    "typePlaceholder": "एक संदेश टाइप करें...",
-    "online": "ऑनलाइन",
-    "offline": "ऑफलाइन",
-    "typing": "टाइप कर रहे हैं...",
-    "members": "सदस्य",
-    "createGroup": "ग्रुप बनाएं",
-    "addMembers": "सदस्य जोड़ें",
-    "leaveGroup": "ग्रुप छोड़ें",
-    "deleteConversation": "वार्तालाप हटाएं",
-    "blockUser": "उपयोगकर्ता को ब्लॉक करें",
-    "reportUser": "उपयोगकर्ता की रिपोर्ट करें",
-    "endToEndEncrypted": "एंड-टू-एंड एन्क्रिप्टेड",
-    "messageEncryption": "संदेश एंड-टू-एंड एन्क्रिप्टेड हैं। इस चैट के बाहर कोई भी, यहां तक कि SALUT भी, उन्हें पढ़ नहीं सकता।"
+    "startConversation": "साइडबार से वार्तालाप चुनें या नई शुरू करें",
+    "newMessage": "नया संदेश"
   }
 }

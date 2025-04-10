@@ -24,9 +24,16 @@ export function TrendingPosts() {
     const fetchTrendingTopics = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('/api/trending');
-        const data = await response.json();
-        setTrendingTopics(data); // Set real data
+        // In a real app, this would be an API call
+        // For example:
+        // const response = await fetch('/api/trending');
+        // const data = await response.json();
+        
+        // Simulate API response
+        await new Promise(resolve => setTimeout(resolve, 800));
+        
+        // We're removing mock data, so we'll set an empty array
+        setTrendingTopics([]);
       } catch (error) {
         console.error('Error fetching trending topics:', error);
       } finally {
@@ -57,8 +64,8 @@ export function TrendingPosts() {
         ) : (
           <div className="space-y-4">
             {trendingTopics.map((topic) => (
-              <Link
-                key={topic.id}
+              <Link 
+                key={topic.id} 
                 href={`/explore?topic=${encodeURIComponent(topic.title)}`}
                 className="block"
               >

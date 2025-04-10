@@ -35,7 +35,12 @@
     "forYou": "For You",
     "sos": "SOS",
     "followers": "Followers",
-    "following": "Following"
+    "following": "Following",
+    "messages": "Messages",
+    "view": "View",
+    "verified": "Verified",
+    "success": "Success!",
+    "error": "Error"
   },
   "auth": {
     "email": "Email",
@@ -51,9 +56,22 @@
     "signUpWith": "Sign up with",
     "termsAndConditions": "By signing up, you agree to our Terms and Conditions",
     "privacyPolicy": "Privacy Policy",
+    "enterCredentials": "Enter your email and password to sign in to your account",
     "signIn": "Sign In",
-    "signUp": "Sign Up",
-    "enterCredentials": "Enter your email and password to sign in to your account"
+    "signUp": "Sign Up"
+  },
+  "feed": {
+    "forYou": "For You",
+    "following": "Following",
+    "noPosts": "No posts to show",
+    "refresh": "Refresh",
+    "loadMore": "Load more",
+    "readMore": "Read more"
+  },
+  "trending": {
+    "title": "Trending",
+    "noTopics": "No trending topics",
+    "postsCount": "{{count}} posts"
   },
   "settings": {
     "theme": {
@@ -61,6 +79,85 @@
       "light": "Light",
       "dark": "Dark",
       "system": "System"
-    }
+    },
+    "subscription": "Subscription"
+  },
+  "profile": {
+    "posts": "Posts",
+    "likes": "Likes",
+    "bookmarks": "Bookmarks",
+    "communities": "Communities",
+    "joinedDate": "Joined",
+    "website": "Website",
+    "location": "Location",
+    "editProfile": "Edit Profile",
+    "editProfileDesc": "Update your profile information and how others see you",
+    "message": "Message",
+    "noPosts": "No posts to show",
+    "noLikes": "No liked posts to show",
+    "noBookmarks": "No bookmarked posts to show",
+    "noCommunities": "No communities to show",
+    "tryPosting": "Posts that you create will appear here",
+    "tryLiking": "Posts that you like will appear here",
+    "tryBookmarking": "Posts that you bookmark will appear here",
+    "tryJoining": "Communities that you join will appear here",
+    "similarProfiles": "Similar Profiles",
+    "peopleToFollow": "People you might want to follow",
+    "activeCommunities": "Active Communities",
+    "showMore": "Show more",
+    "members": "members",
+    "displayName": "Display Name",
+    "username": "Username",
+    "email": "Email",
+    "bio": "Bio",
+    "city": "City",
+    "region": "Region",
+    "changeAvatar": "Change Avatar",
+    "profileUpdated": "Profile updated successfully!",
+    "profileUpdateError": "Failed to update profile. Please try again."
+  },
+  "premium": {
+    "title": "SALUT Premium",
+    "subtitle": "Unlock exclusive features and enhance your experience",
+    "limits": {
+      "freeMessages": "You have {{remaining}} of {{total}} free AI messages remaining this month",
+      "upgradeNow": "Upgrade to Premium for unlimited AI messages"
+    },
+    "pricing": {
+      "monthly": "Monthly",
+      "perMonth": "per month",
+      "yearly": "Yearly",
+      "yearlyDiscount": "Save 16%",
+      "billedAs": "Billed as {{price}} per year",
+      "subscribe": "Subscribe",
+      "currentPlan": "Current Plan",
+      "switchPlan": "Switch Plan"
+    },
+    "features": {
+      "title": "Premium Features",
+      "verifiedBadge": "Verified Badge",
+      "verifiedBadgeDesc": "Stand out with a blue checkmark next to your name",
+      "unlimitedAI": "Unlimited AI Assistant Messages",
+      "unlimitedAIDesc": "No limits on AI-generated responses",
+      "priorityReplies": "Priority in Replies & Trending Topics",
+      "priorityRepliesDesc": "Your content gets seen by more people",
+      "adFree": "Ad-Free Experience",
+      "adFreeDesc": "Enjoy SALUT without any advertisements",
+      "earlyAccess": "Early Access to New Features",
+      "earlyAccessDesc": "Be the first to try new platform features"
+    },
+    "getVerified": "Get Verified"
+  },
+  "messages": {
+    "title": "Messages",
+    "searchPlaceholder": "Search messages...",
+    "all": "All Messages",
+    "unread": "Unread",
+    "typePlaceholder": "Type a message...",
+    "noResults": "No conversations found",
+    "noUnread": "No unread messages",
+    "noConversationSelected": "Select a conversation",
+    "startConversation": "Choose a conversation from the sidebar or start a new one",
+    "newMessage": "New Message"
   }
 }
