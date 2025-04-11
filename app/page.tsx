@@ -1,12 +1,9 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { MainNav } from '@/components/main-nav';
-import { TrendingPosts } from '@/components/trending-posts';
+import { Header } from '@/components/header';
+import { SidebarNav } from '@/components/sidebar-nav';
 import { FeedToggle } from '@/components/feed-toggle';
 import { PostFeed } from '@/components/post-feed';
-import { SidebarNav } from '@/components/sidebar-nav';
-import { ModeToggle } from '@/components/mode-toggle';
-import { Header } from '@/components/header';
+import { TrendingPosts } from '@/components/trending-posts';
+import { ErrorBoundary } from '@/components/error-boundary';
 
 export default function Home() {
   return (
@@ -18,7 +15,9 @@ export default function Home() {
         </aside>
         <main className="flex flex-col space-y-6">
           <FeedToggle />
-          <PostFeed />
+          <ErrorBoundary>
+            <PostFeed type="all" />
+          </ErrorBoundary>
         </main>
         <aside className="hidden lg:block space-y-6">
           <TrendingPosts />

@@ -8,6 +8,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: { unoptimized: true },
+  experimental: {
+    serverActions: true,
+    serverComponentsExternalPackages: ['@supabase/supabase-js']
+  },
   webpack: (config) => {
     config.experiments = {
       ...config.experiments,

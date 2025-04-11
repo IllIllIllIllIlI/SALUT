@@ -16,19 +16,22 @@ import {
 import { VerifiedBadge } from "@/components/verified-badge";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import { type Post } from "./post-feed";
+import { Database } from "@/lib/types/supabase";
+
+type Post = Database['public']['Tables']['posts']['Row'] & {
+  author: Database['public']['Tables']['users']['Row']
+};
 
 interface PostItemProps {
   post: Post;
-  onLike: (postId: string) => void;
-  onBookmark: (postId: string) => void;
 }
 
-export function PostItem({ post, onLike, onBookmark }: PostItemProps) {
+export function PostItem({ post }: PostItemProps) {
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const formatDate = (date: Date) => {
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
     const now = new Date();
     const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
     
@@ -59,20 +62,20 @@ export function PostItem({ post, onLike, onBookmark }: PostItemProps) {
         <div className="flex space-x-4">
           <Link href={`/profile/${post.author.username}`}>
             <Avatar className="h-10 w-10 border-2 border-indigo-100 dark:border-indigo-900">
-              <AvatarImage src={post.author.avatar} alt={post.author.name} />
-              <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
+              <AvatarImage src={post.author.avatar_url || undefined} alt={post.author.display_name || post.author.username} />
+              <AvatarFallback>{(post.author.display_name || post.author.username).charAt(0)}</AvatarFallback>
             </Avatar>
           </Link>
           <div className="flex-1 min-w-0">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <Link href={`/profile/${post.author.username}`} className="font-semibold hover:underline">
-                  {post.author.name}
+                  {post.author.display_name || post.author.username}
                 </Link>
-                {post.author.isVerified && <VerifiedBadge className="ml-1" />}
+                {post.author.is_verified && <VerifiedBadge className="ml-1" />}
                 <span className="text-muted-foreground text-sm ml-2">@{post.author.username}</span>
                 <span className="text-muted-foreground text-sm ml-2">·</span>
-                <span className="text-muted-foreground text-sm ml-2">{formatDate(post.createdAt)}</span>
+                <span className="text-muted-foreground text-sm ml-2">{formatDate(post.created_at)}</span>
               </div>
               <Button variant="ghost" size="icon" className="rounded-full h-8 w-8">
                 <MoreHorizontal className="h-4 w-4" />
@@ -91,54 +94,24 @@ export function PostItem({ post, onLike, onBookmark }: PostItemProps) {
                 </button>
               )}
             </div>
-            
-            {post.media && post.media.length > 0 && (
-              <div className={`mt-3 grid gap-2 ${post.media.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                {post.media.map((item, index) => (
-                  <div key={index} className="relative rounded-lg overflow-hidden bg-muted">
-                    {item.type === 'image' ? (
-                      <img 
-                        src={item.url} 
-                        alt={`Media ${index}`}
-                        className="w-full h-auto object-cover rounded-lg"
-                      />
-                    ) : (
-                      <div className="relative aspect-video bg-black/10 flex items-center justify-center rounded-lg">
-                        <Play className="h-12 w-12 text-white opacity-80" />
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </CardContent>
       <CardFooter className="border-t pt-4 flex justify-between">
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className={`rounded-full ${post.isLiked ? 'text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/20' : ''}`}
-          onClick={() => onLike(post.id)}
-        >
-          <Heart className={`h-4 w-4 mr-1 ${post.isLiked ? 'fill-current' : ''}`} />
-          <span>{post.likes}</span>
+        <Button variant="ghost" size="sm" className="rounded-full">
+          <Heart className="h-4 w-4 mr-1" />
+          <span>0</span>
         </Button>
         <Button variant="ghost" size="sm" className="rounded-full">
           <MessageCircle className="h-4 w-4 mr-1" />
-          <span>{post.comments}</span>
+          <span>0</span>
         </Button>
         <Button variant="ghost" size="sm" className="rounded-full">
           <Share2 className="h-4 w-4 mr-1" />
-          <span>{post.shares}</span>
+          <span>0</span>
         </Button>
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className={`rounded-full ${post.isBookmarked ? 'text-indigo-500 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950/20' : ''}`}
-          onClick={() => onBookmark(post.id)}
-        >
-          <Bookmark className={`h-4 w-4 mr-1 ${post.isBookmarked ? 'fill-current' : ''}`} />
+        <Button variant="ghost" size="sm" className="rounded-full">
+          <Bookmark className="h-4 w-4 mr-1" />
         </Button>
       </CardFooter>
     </Card>
